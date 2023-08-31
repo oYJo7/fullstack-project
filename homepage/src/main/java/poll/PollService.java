@@ -88,6 +88,12 @@ public class PollService {
 		flag = true;
 		return flag;
 	}
+	public boolean insertVoteItem(int parent, int type, String anwser) {
+		boolean flag = false;
+		idao.insertVoteItem(parent, type, anwser);
+		flag = true;
+		return flag;
+	}
 	
 	public Vector<PollitemDTO> readQuestion(int parent) {
 		Vector<PollitemDTO> list = null;

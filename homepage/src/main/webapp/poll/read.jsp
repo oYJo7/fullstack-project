@@ -13,7 +13,7 @@ service.upViewcnt(parent);
 //데이터 조회
 Vector<PollitemDTO> list = service.readQuestion(parent);
 Vector<PollitemDTO> itemlist = service.readPollItem(list);
-System.out.println("itemlist: " + itemlist);
+
 
 %>
 <!DOCTYPE html>
@@ -30,36 +30,53 @@ System.out.println("itemlist: " + itemlist);
 function vote(e) {
 	let itemno = document.getElementById(e.getAttribute('id')).getAttribute('id');
 	
-	let nowType = document.getElementById(itemno).value;
-	if (nowType == 1)
+	let nowType = document.getElementById(itemno).value; //설문유형 확인
 	
- 	let items = document.getElementsByName(itemno);
- 	let btnCheck = false;
- 	let parent = "";
- 	//let parent = [];
- 	items.forEach((node) => {
- 		if(node.checked){
- 			parent = parent + node.value + "-"; 
- 			//parent.push(node.value);
- 			btnCheck = true;
+	let items = document.getElementsByName(itemno); 
+ 	let btnCheck = false; //버튼이 하나 이상 체크되었는지 확인
+ 	
+	if (nowType == 1 ||  nowType==2){
+		let parent = document.getElementById(itemno).name;
+		itemno = itemno + "-" + nowType;
+		let anwser = document.getElementById(itemno).value; 
+		if(anwser.trim()==""){
+			alert("답변을 입력하세요.");
+		}else{
+			let xhr = new XMLHttpRequest();
+			let url = "ajax_type12.jsp?parents="+parent+"&nowPage="+nowType+"&anwser="+anwser;
+			xhr.open("GET", url, true);
+			xhr.send();
+			xhr.onreadystatechange = function() {
+				if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
+					//전송 성공
+					alert("투표 성공");
+				}
+			}
 		}
-	}) 
-	if(!btnCheck){
-		alert("항목을 선택하세요.");
 	}else{
-		let xhr = new XMLHttpRequest();
-		let url = "request_ajax.jsp?parents="+parent;
-		xhr.open("GET", url, true);
-		xhr.send();
-		xhr.onreadystatechange = function() {
-			if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
-				//전송 성공
-				alert("투표 성공");
+		let parent = "";
+	 	items.forEach((node) => {
+	 		if(node.checked){
+	 			parent = parent + node.value + "-"; 
+	 			btnCheck = true;
+			}
+		})
+		
+		if(!btnCheck){
+			alert("항목을 선택하세요.");
+		}else{
+			let xhr = new XMLHttpRequest();
+			let url = "ajax_type34.jsp?parents="+parent;
+			xhr.open("GET", url, true);
+			xhr.send();
+			xhr.onreadystatechange = function() {
+				if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
+					//전송 성공
+					alert("투표 성공");
+				}
 			}
 		}
 	}
-	
-	
 }
 </script>
 </head>
@@ -94,9 +111,9 @@ function vote(e) {
 			<li class="list-group-item">
 
 			<% if(itdto.getType() == 1) { %>
-				<input type="text" class="form-control shadow-sm">
+				<input type="text" id="<%= "item-"+i+"-"+ itdto.getType() %>" class="form-control shadow-sm">
 			<% }else if(itdto.getType() == 2) { %>
-				<textarea class="form-control shadow-sm" rows=5></textarea>
+				<textarea id="<%= "item-"+i+"-"+ itdto.getType() %>" class="form-control shadow-sm" rows=5></textarea>
 			<% }else if(itdto.getType() == 3) { %>
 				<% 
 				for(int j=sloof; j<eloof; j++){ 
@@ -128,8 +145,9 @@ function vote(e) {
 			</li>
 		</ul>
 		<div class="column mt-3 mb-5">
-			<button class="btn btn-dark px-4" id="<%= "item-"+ i %>" value="<%=itdto.getType() %>" onclick="vote(this)">투표</button>
-			<button class="btn btn-dark px-4" id="<%= "item-"+ i %>" onclick="result(this)">결과</button>
+			<!-- name: parent, value: type -->
+			<button class="btn btn-dark px-4" id="<%= "item-"+ i %>" name="<%=itdto.getParent() %>"  value="<%=itdto.getType() %>" onclick="vote(this)">투표</button>
+			<!-- <button class="btn btn-dark px-4" id="<%= "item-"+ i %>" onclick="result(this)">결과</button> -->
 		</div>
 		<%
 			} //for end
