@@ -87,6 +87,35 @@ public class PollitemDAO {
 
 		return flag;
 	}
+	
+	public boolean insertVoteItem(int parent, int type, String anwser) {
+		boolean flag = true;
+		Connection con = DBOpen.open();
+		PreparedStatement pstmt = null;
+
+		StringBuffer sql = new StringBuffer();
+		
+		sql.append("  insert into pollitem (parent, content, type) values(?, ?, ?)  ");
+
+		try {
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setInt(1, parent);
+			pstmt.setString(2, anwser);
+			pstmt.setInt(3, type);
+				
+			int cnt = pstmt.executeUpdate();
+
+			if (cnt > 0)
+				flag = true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			DBClose.close(pstmt, con);
+		}
+
+		return flag;
+	}
 
 //	public Vector<PollitemDTO> itemList(int num) {
 //		Vector<PollitemDTO> vlist = new Vector<PollitemDTO>();

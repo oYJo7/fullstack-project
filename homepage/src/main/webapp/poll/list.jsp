@@ -60,6 +60,15 @@ function read(parent) {
 
 	location.href = url;
 }
+function result(parent) {
+	let url = "result.jsp";
+	url += "?parent="+parent;
+	url += "&nowPage=<%=nowPage%>";
+	url += "&col=<%=col%>";
+	url += "&word=<%=word%>";
+
+	location.href = url;
+}
 </script>
 </head>
 <body>
@@ -95,9 +104,11 @@ function read(parent) {
 							<tr>
 								<th>No</th>
 								<th>Title</th>
+								<th>State</th>
 								<th>Duration</th>
 								<th>View</th>
-								<th>registration</th>
+								<th>Result</th>
+								<th>Registration</th>
 							</tr>
 						</thead>
 						<tbody id="tableBody">
@@ -120,8 +131,14 @@ function read(parent) {
 				                        %> <img src="../images/new.gif"> 
 				                        <% } %>
 									</td>
+									<td>
+										<span class="badge rounded-pill bg-success">진행 중</span>
+									</td>
 									<td><%= dto.getSdate() %> ~ <%=dto.getEdate() %></td>
 									<td><%= dto.getView() %></td>
+									<td>
+										<button type="button" class="btn btn-outline-primary" onclick="result('<%= dto.getNum() %>')">결과</button>
+									</td>
 									<td><%= dto.getWdate() %></td>
 								</tr>
 							<%
