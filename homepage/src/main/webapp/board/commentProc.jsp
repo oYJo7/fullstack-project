@@ -7,6 +7,10 @@
 <%
 int bbsno = Integer.parseInt(request.getParameter("bbsno"));
 boolean flag = dao.cmtCreate(dto, bbsno);
+
+String nowPage = request.getParameter("nowPage");
+String col = request.getParameter("col");
+String word = request.getParameter("word");
 %>
 <!DOCTYPE html>
 <html>
@@ -24,8 +28,12 @@ boolean flag = dao.cmtCreate(dto, bbsno);
 function read(){
 	let url = "read.jsp";
 	url += "?bbsno=<%=request.getParameter("bbsno")%>";
-	url += "&nowPage=<%=request.getParameter("nowPage")%>";
 	
+	url += "&nowPage=<%=nowPage%>";
+	url += "&col=<%=col%>";
+	url += "&word=<%=word%>";
+
+	location.href = url;
 	location.href = url;
 }
 </script>

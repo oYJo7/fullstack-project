@@ -104,6 +104,14 @@ function upHeart(e) {
 		}
 	}
 }
+function cmtCreate(){
+	let url="commentProc.jsp";
+	url += "?nowPage=<%=nowPage%>";
+	url += "&col=<%=col%>";
+	url += "&word=<%=word%>";
+
+	location.href = url;
+}
 </script>
 </head>
 <body>
