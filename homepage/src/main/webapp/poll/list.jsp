@@ -107,8 +107,8 @@ function result(parent) {
 								<th>State</th>
 								<th>Duration</th>
 								<th>View</th>
-								<th>Result</th>
 								<th>Registration</th>
+								<th>Result</th>
 							</tr>
 						</thead>
 						<tbody id="tableBody">
@@ -132,14 +132,40 @@ function result(parent) {
 				                        <% } %>
 									</td>
 									<td>
-										<span class="badge rounded-pill bg-success">진행 중</span>
+										<%  
+										// 현재 날짜 가져오기
+								        LocalDate currentDate = LocalDate.now();
+										String tempDate = dto.getEdate();
+										String[] tempArray = tempDate.split("-");
+										int[] newArr = new int[tempArray.length];
+								        for (int k = 0; k < tempArray.length; k++) {
+								            newArr[k] = Integer.parseInt(tempArray[k]);
+								        }
+								        // 비교할 날짜 생성 
+								        LocalDate targetDate = LocalDate.of(newArr[0], newArr[1], newArr[2]);
+
+								        // 현재 날짜와 비교할 날짜 비교
+								        int comparisonResult = currentDate.compareTo(targetDate);
+								        
+								        if (comparisonResult <= 0) {
+							            %>
+								            <span class="badge rounded-pill bg-success">진행</span>
+							            <% 
+								        }else{
+							        	%>
+								        	<span class="badge rounded-pill bg-danger">종료</span>
+							        	<% 
+								        }
+								        %>
+										
 									</td>
 									<td><%= dto.getSdate() %> ~ <%=dto.getEdate() %></td>
 									<td><%= dto.getView() %></td>
+									<td><%= dto.getWdate() %></td>
 									<td>
 										<button type="button" class="btn btn-outline-primary" onclick="result('<%= dto.getNum() %>')">결과</button>
 									</td>
-									<td><%= dto.getWdate() %></td>
+									
 								</tr>
 							<%
 								} //for end

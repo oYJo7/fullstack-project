@@ -45,7 +45,7 @@ public class PollDAO {
 //		}
 //		return vlist;
 //	}
-
+	
 	public PollDTO read(int num) {
 		PollDTO dto = null;
 		Connection con = DBOpen.open();
@@ -128,8 +128,9 @@ public class PollDAO {
 		}
 		return qlist;
 	}
+	
 
-	public Vector<PollitemDTO> readPollFirst(Vector<PollitemDTO> list) {
+	public Vector<PollitemDTO> readPollItem(Vector<PollitemDTO> list) {
 		Vector<PollitemDTO> qlist = new Vector<PollitemDTO>();
 		
 		Connection con = DBOpen.open();
@@ -139,7 +140,11 @@ public class PollDAO {
 		
 		String query=" select itemnum, parent, content, count, type from pollitem where parent=? ";
 		for(int i=0; i < list.size()-1; i++ ) {
-			query = query.concat(" or parent=? ");
+			if (i == list.size()-2) {
+				query = query.concat(" or parent=? order by parent ");
+			}else {
+				query = query.concat(" or parent=? ");
+			}
 		}
 		sql.append(query);
 
@@ -171,7 +176,6 @@ public class PollDAO {
 		return qlist;
 	}
 
-	
 	public int upViewcnt(int parent) {
 		Connection con = DBOpen.open();
 		PreparedStatement pstmt = null;
