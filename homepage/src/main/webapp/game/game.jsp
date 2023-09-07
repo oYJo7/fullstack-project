@@ -52,7 +52,6 @@ a {
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                     </div>
                                      참여자들이 작은 두더지 모형이 등장하는 판 위에서 두더지가 나타날 때마다 레버나 버튼을 눌러 잡는 게임입니다.
                                 </div>
@@ -104,9 +103,6 @@ a {
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                     </div>
                                     지뢰찾기는 격자 형태의 게임 보드에서 지뢰가 있는 칸을 피하며, 안전한 칸을 클릭하여 숨겨진 지뢰의 위치를 찾아내는 게임입니다. 
                                 </div>
@@ -128,8 +124,6 @@ a {
                                     <h5 class="fw-bolder">카드 짝 맞추기</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
@@ -157,8 +151,6 @@ a {
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                     </div>
                                     모험을 떠나서 몬스터를 처치하고 퀘스트를 완료하며 캐릭터를 성장시키는 게임입니다.
                                 </div>
@@ -179,8 +171,6 @@ a {
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">틱택토</h5>
                                     <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
@@ -210,7 +200,6 @@ a {
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                     </div>
                                     화면에 나타난 신호 또는 패턴에 빠르게 반응하여 정확하게 특정 동작을 수행하는 게임입니다.
                                 </div>
@@ -232,9 +221,6 @@ a {
                                     <h5 class="fw-bolder">가위바위보</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                     </div>
@@ -259,10 +245,6 @@ a {
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                     </div>
                                     랜덤으로 7개의 공(번호)를 뽑아주는 게임입니다.
                                 </div>
@@ -286,9 +268,6 @@ a {
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                     </div>
                                      한 플레이어가 임의로 생성한 숫자를 상대 플레이어가 맞추는 게임입니다.
                                 </div>
@@ -309,10 +288,6 @@ a {
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">계산기</h5>
                                     <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     숫자와 연산자를 입력하여 간단한 산술 계산을 수행하는 도구 또는 프로그램입니다.
@@ -337,9 +312,6 @@ a {
                                     <h5 class="fw-bolder">끝말잇기</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                     </div>
