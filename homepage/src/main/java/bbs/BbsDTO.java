@@ -27,6 +27,8 @@ public class BbsDTO {
 	private String cdate;
 	/** 댓글 공감 */
 	private int heart;
+	/** 댓글 부모 */
+	private String prent;
 	public int getBbsno() {
 		return bbsno;
 	}
@@ -104,6 +106,12 @@ public class BbsDTO {
 	}
 	public void setHeart(int heart) {
 		this.heart = heart;
+	}
+	public String getPrent() {
+		return prent;
+	}
+	public void setPrent(String prent) {
+		this.prent = prent;
 	}
 	
 	
