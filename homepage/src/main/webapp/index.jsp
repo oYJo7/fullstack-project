@@ -123,7 +123,8 @@
 							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i>
 						</div>
 						<ul class="list-unstyled mt-3 mb-4">
-							<!-- <li>공지사항 목록</li> -->
+							<li>12가지 게임</li>
+							<li>두더지 잡기, 2048, 지뢰찾기, 카드 짝 맞추기, 텍스트 RPG, 틱택토, 반응속도 테스트, 가위바위보, 로또 추첨기, 숫자야구, 계산기, 끝말잇기</li>
 						</ul>
 					</div>
 				</div>

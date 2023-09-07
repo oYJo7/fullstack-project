@@ -26,9 +26,9 @@
 	<jsp:include page="/menu/top.jsp" />
 	<div class="container my-5">
 		<div class="mt-5"><span id="order">1</span>번째 참가자</div>
-		<div>제시어: <span id="word"></span></div>
-		<input type="text">
-		<button>입력</button>
+        <div>제시어: <span id="word"></span></div>
+        <input type="text" />
+        <button id="btn">입력</button>
 	</div>
 	<jsp:include page="/menu/bottom.jsp" />
 </body>
