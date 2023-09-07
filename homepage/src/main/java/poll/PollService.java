@@ -2,6 +2,9 @@ package poll;
 
 import java.util.Map;
 import java.util.Vector;
+import java.text.ParseException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class PollService {
 
@@ -100,12 +103,15 @@ public class PollService {
 		list = dao.readQuestion(parent);
 		return list;
 	}
+
 	
 	public Vector<PollitemDTO> readPollItem(Vector<PollitemDTO> list) {
 		Vector<PollitemDTO> temp = null;
-		temp = dao.readPollFirst(list);
+		temp = dao.readPollItem(list);
 		return temp;
 	}
+	
+
 
 //	public Vector<PollitemDTO> itemList(int num) {
 //		Vector<PollitemDTO> list = null;

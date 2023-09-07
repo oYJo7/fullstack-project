@@ -105,7 +105,7 @@ function vote(e) {
 				cnt = eloof;
 		%>
 		<ul class="list-group shadow-sm mt-5">
-			<li class="list-group-item bg-light">
+			<li class="list-group-item list-group-item-secondary">
 				<h3><%=ldto.getQuestion() %></h3>
 			</li>
 			<li class="list-group-item">
@@ -113,7 +113,7 @@ function vote(e) {
 			<% if(itdto.getType() == 1) { %>
 				<input type="text" id="<%= "item-"+i+"-"+ itdto.getType() %>" class="form-control shadow-sm">
 			<% }else if(itdto.getType() == 2) { %>
-				<textarea id="<%= "item-"+i+"-"+ itdto.getType() %>" class="form-control shadow-sm" rows=5></textarea>
+				<textarea id="<%= "item-"+i+"-"+ itdto.getType() %>" class="form-control shadow-sm" rows=8></textarea>
 			<% }else if(itdto.getType() == 3) { %>
 				<% 
 				for(int j=sloof; j<eloof; j++){ 
