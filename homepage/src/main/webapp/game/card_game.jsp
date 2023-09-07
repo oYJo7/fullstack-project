@@ -21,6 +21,7 @@
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 <script src="../js/game/card_game.js" defer></script>
+<!-- https://github.com/wonseok22/ToyProjects/tree/main/cardGame -->
 <style>
 	*{
           margin: 0;
