@@ -88,7 +88,7 @@ Vector<PollitemDTO> itemlist = service.readPollItem(list);
 			chartCnt++;
 		%>
 			<div class="chart-div my-3" id="<%= "PchartCanvas-"+chartCnt %>">
-           		<canvas id="<%= "ChartCanvas-"+chartCnt %>" width="1200px" height="300px"></canvas>
+           		<canvas id="<%= "ChartCanvas-"+chartCnt %>" width="400px" height="300px"></canvas>
            		<% 
         		int loofcnt = 0; //hidden count
 				for(int j=sloof; j<eloof; j++){  
@@ -109,7 +109,7 @@ Vector<PollitemDTO> itemlist = service.readPollItem(list);
 			chartCnt++;
 		%>
 			<div class="chart-div my-3" id="<%= "PchartCanvas-"+chartCnt %>">
-           		<canvas id="<%= "ChartCanvas-"+chartCnt %>" width="1200px" height="300px"></canvas>
+           		<canvas id="<%= "ChartCanvas-"+chartCnt %>" width="400px" height="300px"></canvas>
            		<% 
         		int loofcnt = 0; //hidden count
 				for(int j=sloof; j<eloof; j++){  

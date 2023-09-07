@@ -22,16 +22,18 @@
 						alt="..." />
 				</div>
 				<div class="col-md-6">
-					<div class="small mb-1">2023. 08. 09. ~ 2023. XX. XX.</div>
+					<div class="small mb-1">2023. 08. 09. ~ 2023. 09. 15.</div>
 					<h1 class="display-5 fw-bolder">
 						풀스택 개발자 양성과정<br />: 프로젝트 (1)
 					</h1>
 					<div class="fs-5 mb-5">
 						<span>설문조사, 게시판, 공지사항, 웹게임</span>
 					</div>
-					<p class="lead">2023년 풀스택 개발자 양성 과정 프로그램에서 진행된 첫 번째 프로젝트 입니다.
+					<p class="lead">
+						2023년 풀스택 개발자 양성 과정 프로그램에서 진행된 첫 번째 프로젝트 입니다.
 						미션은 설문조사, 게시판, 공지사항, 웹게임 페이지를 생성하는 것입니다. Bootstrap 5를 사용하여 웹페이지를
-						디자인하였습니다. 또한 JSP를 사용하여 기능을 구현할 예정입니다.</p>
+						디자인하였습니다.
+					</p>
 
 					<a class="btn btn-dark btn-lg" href="#mission">더보기</a>
 				</div>
@@ -39,22 +41,21 @@
 		</div>
 	</section>
 
-	<div class="container mt-5" id="mission">
+	<div class="container my-5" id="mission">
 		<h2 class="fw-bolder mb-4">미션 목록</h2>
-		<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+		<div class="row row-cols-1 row-cols-md-4 mb-3 text-center">
 			<div class="col">
-				<div class="card mb-4 rounded-3 shadow-sm">
+				<div class="card mb-4 rounded-3 shadow-sm" style="height: 400px">
 					<div class="card-header py-3">
 						<h4 class="my-0 fw-normal">설문조사</h4>
 					</div>
 					<div class="card-body">
 						<p>난이도</p>
 						<h1 class="card-title pricing-card-title">3/5</h1>
-						<div
-							class="d-flex justify-content-center small text-warning mt-3 mb-2">
-							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i> <i
-								class="fa-solid fa-star fa-xl" style="color: #ffea00"></i> <i
-								class="fa-solid fa-star fa-xl" style="color: #ffea00"></i>
+						<div class="d-flex justify-content-center small text-warning mt-3 mb-2">
+							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i> 
+							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i> 
+							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i>
 						</div>
 						<ul class="list-unstyled mt-3 mb-4">
 							<li>설문생성</li>
@@ -66,17 +67,16 @@
 				</div>
 			</div>
 			<div class="col">
-				<div class="card mb-4 rounded-3 shadow-sm">
+				<div class="card mb-4 rounded-3 shadow-sm" style="height: 400px">
 					<div class="card-header py-3">
 						<h4 class="my-0 fw-normal">게시판</h4>
 					</div>
 					<div class="card-body">
 						<p>난이도</p>
 						<h1 class="card-title pricing-card-title">2/5</h1>
-						<div
-							class="d-flex justify-content-center small text-warning mt-3 mb-2">
-							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i> <i
-								class="fa-solid fa-star fa-xl" style="color: #ffea00"></i>
+						<div class="d-flex justify-content-center small text-warning mt-3 mb-2">
+							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i> 
+							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i>
 						</div>
 						<ul class="list-unstyled mt-3 mb-4">
 							<li>게시판 목록</li>
@@ -88,17 +88,16 @@
 				</div>
 			</div>
 			<div class="col">
-				<div class="card mb-4 rounded-3 shadow-sm">
+				<div class="card mb-4 rounded-3 shadow-sm" style="height: 400px">
 					<div class="card-header py-3">
 						<h4 class="my-0 fw-normal">공지사항</h4>
 					</div>
 					<div class="card-body">
 						<p>난이도</p>
 						<h1 class="card-title pricing-card-title">2/5</h1>
-						<div
-							class="d-flex justify-content-center small text-warning mt-3 mb-2">
-							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i> <i
-								class="fa-solid fa-star fa-xl" style="color: #ffea00"></i>
+						<div class="d-flex justify-content-center small text-warning mt-3 mb-2">
+							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i> 
+							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i>
 						</div>
 						<ul class="list-unstyled mt-3 mb-4">
 							<li>공지사항 목록</li>
@@ -110,19 +109,18 @@
 				</div>
 			</div>
 			<div class="col">
-				<div class="card mb-4 rounded-3 shadow-sm">
+				<div class="card mb-4 rounded-3 shadow-sm" style="height: 400px">
 					<div class="card-header py-3">
 						<h4 class="my-0 fw-normal">웹게임</h4>
 					</div>
 					<div class="card-body">
 						<p>난이도</p>
 						<h1 class="card-title pricing-card-title">4/5</h1>
-						<div
-							class="d-flex justify-content-center small text-warning mt-3 mb-2">
-							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i> <i
-								class="fa-solid fa-star fa-xl" style="color: #ffea00"></i> <i
-								class="fa-solid fa-star fa-xl" style="color: #ffea00"></i> <i
-								class="fa-solid fa-star fa-xl" style="color: #ffea00"></i>
+						<div class="d-flex justify-content-center small text-warning mt-3 mb-2">
+							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i> 
+							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i> 
+							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i> 
+							<i class="fa-solid fa-star fa-xl" style="color: #ffea00"></i>
 						</div>
 						<ul class="list-unstyled mt-3 mb-4">
 							<!-- <li>공지사항 목록</li> -->
