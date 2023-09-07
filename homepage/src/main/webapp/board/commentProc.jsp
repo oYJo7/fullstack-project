@@ -36,6 +36,15 @@ function read(){
 	location.href = url;
 	location.href = url;
 }
+
+function list(){
+	let url = "list.jsp";
+	url += "?nowPage=<%=nowPage%>";
+	url += "&col=<%=col%>";
+	url += "&word=<%=word%>";
+
+	location.href = url;
+}
 </script>
 </head>
 <body>
@@ -53,7 +62,7 @@ function read(){
 		<button class="btn btn-light" onclick="history.back()">다시 등록</button>
 		<button class="btn btn-light" onclick="read()">돌아가기</button>
 		<button type="button" class="btn btn-light"
-			onclick="location.href='list.jsp'">목록</button>
+			onclick="list()">목록</button>
 	</div>
 	<jsp:include page="/menu/bottom.jsp" />
 </body>

@@ -115,7 +115,7 @@ function cmtCreate(){
 </script>
 </head>
 <body>
-	<jsp:include page="/menu/top.jsp" />
+	<jsp:include page="/menu/top.jsp" />N
 	<div class="container mt-5">
 		<ul class="list-group mt-5">
 			<li class="list-group-item list-group-item-secondary">
