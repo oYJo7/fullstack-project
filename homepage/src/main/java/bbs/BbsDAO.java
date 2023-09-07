@@ -386,7 +386,7 @@ public class BbsDAO {
 		int bbsno = (int) map.get("bbsno"); // 시작행
 
 		StringBuffer sql = new StringBuffer();
-		sql.append(" SELECT cmtno, cname, content, passwd, cdate, heart ");
+		sql.append(" SELECT cmtno, cname, content, passwd, cdate, heart, pren ");
 		sql.append(" FROM comment   ");
 		sql.append(" WHERE bbsno = ?   ");
 
@@ -403,6 +403,48 @@ public class BbsDAO {
 				dto.setCmtpasswd(rs.getString("passwd"));
 				dto.setCdate(rs.getString("cdate"));
 				dto.setHeart(rs.getInt("heart"));
+				dto.setPrent(rs.getString("pren"));
+
+				list.add(dto);
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			DBClose.close(rs, pstmt, con);
+		}
+
+		return list;
+	}
+	
+	public List<BbsDTO> cmtChildRead(Map map) {
+		List<BbsDTO> list = new ArrayList<BbsDTO>();
+		Connection con = DBOpen.open();
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		int bbsno = (int) map.get("bbsno"); // 시작행
+
+		StringBuffer sql = new StringBuffer();
+		sql.append(" SELECT cmtno, cname, content, passwd, cdate, heart, pren ");
+		sql.append(" FROM comment   ");
+		sql.append(" WHERE bbsno = ? and not pren='0'  ");
+
+		try {
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setInt(1, bbsno);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				BbsDTO dto = new BbsDTO();
+				dto.setCmtno(rs.getInt("cmtno"));
+				dto.setCname(rs.getString("cname"));
+				dto.setCmtcontent(rs.getString("content"));
+				dto.setCmtpasswd(rs.getString("passwd"));
+				dto.setCdate(rs.getString("cdate"));
+				dto.setHeart(rs.getInt("heart"));
+				dto.setPrent(rs.getString("pren"));
 
 				list.add(dto);
 			}
@@ -422,8 +464,8 @@ public class BbsDAO {
 		Connection con = DBOpen.open();
 		PreparedStatement pstmt = null;
 		StringBuffer sql = new StringBuffer();
-		sql.append(" insert into comment(bbsno, cname, content, passwd, cdate) ");
-		sql.append(" values(?,?,?,?,now() ) ");
+		sql.append(" insert into comment(bbsno, cname, content, passwd, cdate, pren) ");
+		sql.append(" values(?,?,?,?,now(),? ) ");
 
 		try {
 			pstmt = con.prepareStatement(sql.toString());
@@ -431,6 +473,7 @@ public class BbsDAO {
 			pstmt.setString(2, dto.getWname());
 			pstmt.setString(3, dto.getContent());
 			pstmt.setString(4, dto.getPasswd());
+			pstmt.setString(5, dto.getPrent());
 
 			int cnt = pstmt.executeUpdate();
 

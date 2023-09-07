@@ -16,6 +16,7 @@ Map map = new HashMap();
 map.put("bbsno", bbsno);
 
 List<BbsDTO> list = dao.cmtRead(map);
+List<BbsDTO> cn_list = dao.cmtChildRead(map);
 
 %>
 <!DOCTYPE html>
@@ -112,6 +113,18 @@ function cmtCreate(){
 
 	location.href = url;
 }
+function newCmt(e){
+	let cmtno = document.getElementById(e.getAttribute('id')).getAttribute('id');
+<%-- 	let str='<from action="commentProc.jsp" method="post"><input type="hidden" id="bbsno" name="bbsno" value="'+<%=bbsno%>+> --%>
+	let str='<form action="commentProc.jsp" method="post"><input type="hidden" id="bbsno" name="bbsno" value="<%=bbsno %>"><input type="hidden" name="nowPage" value="<%=nowPage %>"><input type="hidden" name="col" value="<%=col %>"><input type="hidden" name="word" value="<%=word %>"><input type="hidden" name="prent" value=';
+	str+=cmtno;
+	str+='><div class="container"><div class="row"><div class="col p-0 pe-3"><input type="text" class="form-control shadow-sm mb-2" name="wname" id="wname" placeholder="이름" /> </div><div class="col p-0"><input type="password" class="form-control shadow-sm mb-2" name="passwd" id="pwd" placeholder="비밀번호" /> </div><textarea class="form-control shadow-sm mb-2" name="content" id="content" rows="3" placeholder="댓글을 작성하세요."></textarea></div><button class="btn btn-dark mb-3" type="submit">업로드</button></form>';
+	console.log(str);
+	let cmtForm = document.getElementById(cmtno+"new_cmt");
+	console.log(cmtno+"new_cmt");
+	cmtForm.innerHTML=str;
+}
+
 </script>
 </head>
 <body>
@@ -143,6 +156,7 @@ function cmtCreate(){
 						<input type="hidden" name="nowPage" value="<%=nowPage %>">
 						<input type="hidden" name="col" value="<%=col %>">
 						<input type="hidden" name="word" value="<%=word %>">
+						<input type="hidden" name="prent" value="0">
 						<div class="container">
 						  <div class="row">
 						    <div class="col p-0 pe-3">
@@ -162,7 +176,7 @@ function cmtCreate(){
 							for (int i = 0; i < list.size(); i++) {
 								BbsDTO cmtdto = list.get(i);
 					%>
-					<ul class="list-group shadow-sm my-3">
+					<ul class="commentList list-group shadow-sm my-3">
 						<li class="list-group-item bg-light fw-bold"><%=cmtdto.getCname()%> 
 							<span class="badge rounded-pill text-dark" id="comment-1" style="cursor: pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="공감">
 								<img src="../images/heart.png" alt="Red Heart" width="16" height="16" class="mb-1 me-2" /><%=cmtdto.getHeart()%> 
@@ -174,13 +188,48 @@ function cmtCreate(){
 							<div class="row">
 								<div class="col">
 									<button class="btn btn-light" id="<%=cmtdto.getCmtno()%>" onclick="cmtDel(this)">삭제</button>
-						  			<button class="btn btn-light">댓글</button>
+						  			<button class="btn btn-light"  id="<%=cmtdto.getCmtno()%>" onclick="newCmt(this)">댓글</button>
 						  			<button class="btn btn-light" id="<%=cmtdto.getCmtno()%>" onclick="upHeart(this)">공감</button>
 					  			</div>
 					  		</div>
 				  		</li>
 			  		</ul>
+			  		<div class="card-body  m-0  p-0" id="<%=cmtdto.getCmtno()%>new_cmt" style="min-height:0"></div>
 			  		<%
+			  			if(cn_list.size()!=0){
+			  				for(int j = 0; j<cn_list.size(); j++){
+			  					BbsDTO child_dto = cn_list.get(j);
+			  					if(Integer.parseInt(child_dto.getPrent().split(">")[0])==cmtdto.getCmtno()){
+
+			  		%>
+			  		<img src="../images/re2.png" alt="Reply" width="16" height="16" class="col" style=" float:left;"" />
+					<ul class="commentList list-group shadow-sm mt-0 my-1 ms-4"  style=" float:left; width: 98%;" >
+						<li class="list-group-item bg-light fw-bold"><%=child_dto.getCname()%> 
+							<span class="badge rounded-pill text-dark" id="comment-1" style="cursor: pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="공감">
+								<img src="../images/heart.png" alt="Red Heart" width="16" height="16" class="mb-1 me-2" /><%=child_dto.getHeart()%> 
+							</span>
+						</li>
+						<li class="list-group-item"><%=child_dto.getCmtcontent()%></li>
+						<li class="list-group-item bg-light"><%=child_dto.getCdate()%></li>
+						<li class="list-group-item bg-light">
+							<div class="row">
+								<div class="col">
+									<button class="btn btn-light" id="<%=child_dto.getCmtno()%>" onclick="cmtDel(this)">삭제</button>
+						  			<button class="btn btn-light"  id="<%=child_dto.getCmtno()%>" onclick="newCmt(this)">댓글</button>
+						  			<button class="btn btn-light" id="<%=child_dto.getCmtno()%>" onclick="upHeart(this)">공감</button>
+					  			</div>
+					  		</div>
+				  		</li>
+			  		</ul><div style="clear:both;"></div>
+			  		
+			  		<div class="card-body  m-0  p-0 ms-5 mt-2" id="<%=child_dto.getCmtno()%>new_cmt" style="min-height:0;"></div>
+			  		<%
+			  					}
+			  				}
+			  			}
+			  		%>
+			  		<%
+			  		
 							} //for_end
 			
 						} //if_end
