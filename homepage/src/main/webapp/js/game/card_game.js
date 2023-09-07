@@ -1,4 +1,4 @@
- const cards =document.querySelectorAll(".cards li");
+ const cards =document.querySelectorAll(".cardss li");
 
         let cardOne, cardTwo; // 선택한 카드
         let disableDeck = false;
@@ -15,8 +15,8 @@
                 cardTwo =clickedCard;
                 disableDeck = true;
 
-                let cardOneImg = cardOne.querySelector(".back img").src;
-                let cardTwoImg = cardTwo.querySelector(".back img").src;
+                let cardOneImg = cardOne.querySelector(".back .img-space").src;
+                let cardTwoImg = cardTwo.querySelector(".back .img-space").src;
 
                 matchCards(cardOneImg, cardTwoImg);
             }
