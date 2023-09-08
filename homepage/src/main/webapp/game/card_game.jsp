@@ -31,7 +31,7 @@
       ul {
           list-style: none;
       }
-      img {
+      .img-space {
           width: 100%;
           vertical-align: top;
       }
@@ -51,7 +51,7 @@
           border-radius: 20px;
           padding: 30px;
       }
-      .cards {
+      .cardss {
           display: flex;
           flex-wrap: wrap;
           justify-content: space-around;
@@ -60,7 +60,7 @@
           height: 100%;
          
       }
-      .cards li {
+      .cardss li {
           width: calc(100% / 4 - 20px);
           height: calc(100% / 4 - 20px);
           border: 1px solid #ccc;
@@ -68,7 +68,7 @@
           transform-style: preserve-3d;
           position: relative;  
       }
-      .cards li .view {
+      .cardss li .view {
           position: absolute;
           background:rgba(0, 0, 255, 0.2);
           padding: 10%;
@@ -79,21 +79,21 @@
           user-select: none;
           pointer-events: none;
       }
-      .cards li .view.front {
+      .cardss li .view.front {
           z-index: 10;
           
           transform: rotateY(0deg);
       }
-      .cards li .view.back {
+      .cardss li .view.back {
           transform: rotateY(180deg);
       }
-      .cards li.flip .view.front {
+      .cardss li.flip .view.front {
           transform: rotateY(-180deg);
       }
-      .cards li.flip .view.back {
+      .cardss li.flip .view.back {
           transform: rotateY(0deg);
       }
-      .cards li.shake {
+      .cardss li.shake {
           animation: shake 0.35s ease-in-out;
       }
       @keyframes shake {
@@ -110,90 +110,90 @@
 	<jsp:include page="/menu/top.jsp" />
 	<div class="wrap__card">
         <div class="card__inner">
-            <ul class="cards">
+            <ul class="cardss">
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" class="img-space" alt="symbol-of-spades.png">
                     </div>
                     <div class="view back">
-                        <img src="../images/aubergine.png" alt="aubergine.png">
+                        <img src="../images/aubergine.png" class="img-space" alt="aubergine.png">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" class="img-space" alt="symbol-of-spades.png">
                     </div>
                     <div class="view back">
-                        <img src="../images/grapes.png" alt="grapes.png">
+                        <img src="../images/grapes.png" alt="grapes.png" class="img-space">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png" class="img-space">
                     </div>
                     <div class="view back">
-                        <img src="../images/carrot.png" alt="carrot.png">
+                        <img src="../images/carrot.png" alt="carrot.png" class="img-space">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png" class="img-space">
                     </div>
                     <div class="view back">
-                        <img src="../images/cherries.png" alt="cherries.png">
+                        <img src="../images/cherries.png" alt="cherries.png" class="img-space">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png" class="img-space">
                     </div>
                     <div class="view back">
-                        <img src="../images/toffee.png" alt="toffee.png">
+                        <img src="../images/toffee.png" alt="toffee.png" class="img-space">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png" class="img-space" >
                     </div>
                     <div class="view back">
-                        <img src="../images/cherries.png" alt="cherries.png">
+                        <img src="../images/cherries.png" alt="cherries.png" class="img-space" >
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png" class="img-space" >
                     </div>
                     <div class="view back">
-                        <img src="../images/aubergine.png" alt="aubergine.png">
+                        <img src="../images/aubergine.png" alt="aubergine.png" class="img-space" >
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png" class="img-space" >
                     </div>
                     <div class="view back">
-                        <img src="../images/carrot.png" alt="carrot.png">
+                        <img src="../images/carrot.png" alt="carrot.png" class="img-space" >
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png" class="img-space" >
                     </div>
                     <div class="view back">
-                        <img src="../images/cupcake.png" alt="cupcake.png">
+                        <img src="../images/cupcake.png" alt="cupcake.png" class="img-space" >
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png" class="img-space" >
                     </div>
                     <div class="view back">
-                        <img src="../images/grapes.png" alt="grapes.png">
+                        <img src="../images/grapes.png" alt="grapes.png" class="img-space" >
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png" class="img-space" >
                     </div>
                     <div class="view back">
                         <img src="../images/meat.png" alt="meat">
@@ -201,7 +201,7 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png" class="img-space" >
                     </div>
                     <div class="view back">
                         <img src="../images/meat.png" alt="meat">
@@ -209,34 +209,34 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png" class="img-space" >
                     </div>
                     <div class="view back">
-                        <img src="../images/strawberry.png" alt="strawberry.png">
+                        <img src="../images/strawberry.png" alt="strawberry.png" class="img-space" >
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png" class="img-space" >
                     </div>
                     <div class="view back">
-                        <img src="../images/cupcake.png" alt="cupcake.png">
+                        <img src="../images/cupcake.png" alt="cupcake.png" class="img-space" >
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png" class="img-space" >
                     </div>
                     <div class="view back">
-                        <img src="../images/strawberry.png" alt="strawberry.png">
+                        <img src="../images/strawberry.png" alt="strawberry.png" class="img-space" >
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png">
+                        <img src="../images/symbol-of-spades.png" alt="symbol-of-spades.png" class="img-space" >
                     </div>
                     <div class="view back">
-                        <img src="../images/toffee.png" alt="toffee.png">
+                        <img src="../images/toffee.png" alt="toffee.png" class="img-space" >
                     </div>
                 </li>
             </ul>
