@@ -388,7 +388,7 @@ public class BbsDAO {
 		StringBuffer sql = new StringBuffer();
 		sql.append(" SELECT cmtno, cname, content, passwd, cdate, heart, pren ");
 		sql.append(" FROM comment   ");
-		sql.append(" WHERE bbsno = ?   ");
+		sql.append(" WHERE bbsno = ? and pren = '0' ");
 
 		try {
 			pstmt = con.prepareStatement(sql.toString());
@@ -737,7 +737,9 @@ public class BbsDAO {
 
 		return list;
 	}
-	
+	public int getPrent(BbsDTO dto) {
+		return 0;
+	}
 	public boolean create(BbsDTO dto) {
 		boolean flag = false;
 		Connection con = DBOpen.open();
