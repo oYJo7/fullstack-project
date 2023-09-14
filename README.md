@@ -32,7 +32,7 @@
 
 &nbsp;
 
- 📫Survey Page
+ 📫 Survey Page
 -------------
 ![image](https://github.com/oYJo7/fullstack-project/assets/66421365/3acdc4ad-76c8-43a4-b4b2-c97a5c109a3f)
 
@@ -75,7 +75,7 @@
 &nbsp;
 
 
- 📫board Page
+ 📃 board Page
 -------------
 ![image](https://github.com/oYJo7/fullstack-project/assets/66421365/3acdc4ad-76c8-43a4-b4b2-c97a5c109a3f)
 
