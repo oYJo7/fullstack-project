@@ -36,6 +36,7 @@
 -------------
 ![image](https://github.com/oYJo7/fullstack-project/assets/66421365/3acdc4ad-76c8-43a4-b4b2-c97a5c109a3f)
 
+> 설문조사 목록   
 > 전체 설문조사 목록 확인 가능   
 > 진행 여부에 따라 진행, 종료 태그   
 
@@ -43,16 +44,33 @@
 &nbsp;
 
 &nbsp;
-![image](https://github.com/oYJo7/fullstack-project/assets/66421365/7bab026d-08a3-4b44-8103-546954f64196)
+![image](https://github.com/oYJo7/fullstack-project/assets/66421365/665fc898-7b6d-46d1-9044-47b51c31553b)
 
-> 설문 유형- 주관식, 단답형, 주관식 서술형, 단일 선택형, 복수 선택형   
+> 설문조사 생성   
+> 설문 유형- 주관식 단답형, 주관식 서술형, 단일 선택형, 복수 선택형   
 > 추가 버튼을 통해 사용자가 선택한 설문 유형 동적 생성 가능   
 > 초기화 버튼을 통해 설문조사 항목 모두 삭제   
-> 업로드 버튼을 통해 설문조사 등록   
+> 업로드 버튼을 통해 설문조사 등록
+
 
 &nbsp;
 
 &nbsp;
+
+![image](https://github.com/oYJo7/fullstack-project/assets/66421365/7bab026d-08a3-4b44-8103-546954f64196)
+
+> 설문조사 수행     
+> 생성된 설문조사 페이지 내 문항 투표 가능
+&nbsp;
+
+&nbsp;
+
+![image](https://github.com/oYJo7/fullstack-project/assets/66421365/4eb989ce-144e-4922-ba12-0f5c1037d613)
+
+> 설문 결과   
+> 설문 결과를 통합하여 확인 가능   
+> 선택형의 경우 그래프로, 주관식의 경우 모든 답 리스트 확인 가능   
+
 
 &nbsp;
 
