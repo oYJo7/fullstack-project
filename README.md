@@ -18,6 +18,8 @@
   <br />
 </div>
 
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oYJo7)](https://github.com/oYJo7/github-readme-stats)
+
 
  🥸Main Page
 -------------
