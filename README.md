@@ -10,6 +10,7 @@
     <a href="#"><img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white"/></a>
     <a href="#"><img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=white"/></a>
     <a href="#"><img src="https://img.shields.io/badge/Java-4169E1?style=flat&logo=Java&logoColor=white"/></a>
+    <br />
     <a href="#"><img src="https://img.shields.io/badge/HTML5-4FC08D?style=flat&logo=html5&logoColor=white"/></a>
     <a href="#"><img src="https://img.shields.io/badge/Bootstrap-a947ff?style=flat&logo=bootstrap&logoColor=white"/></a>
     <a href="#"><img src="https://img.shields.io/badge/JQuery-3766AB?style=flat&logo=jquery&logoColor=white"/></a>
