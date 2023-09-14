@@ -16,9 +16,11 @@
       <a href="#"><img src="https://img.shields.io/badge/AJAX-4169E1?style=flat&logo=ajax&logoColor=white"/></a>
   </div>
   <br />
-</div>
+
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oYJo7)](https://github.com/oYJo7/github-readme-stats)
+
+</div>
 
 
  🥸Main Page
