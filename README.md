@@ -115,4 +115,55 @@
 
 &nbsp;
 
+📋 notice Page
+-------------
+![image](https://github.com/oYJo7/fullstack-project/assets/66421365/3acdc4ad-76c8-43a4-b4b2-c97a5c109a3f)
+
+
+> 공지사항 목록  
+> 공지사항 제목, 작성자, 조회수, 등록일
+> 검색: 작성자, 제목, 내용, 제목+내용, 전체 출력
+
+
+
+&nbsp;
+
+&nbsp;
+![image](https://github.com/oYJo7/fullstack-project/assets/66421365/665fc898-7b6d-46d1-9044-47b51c31553b)
+
+> 공지사항 생성
+> 공지사항 세부사항(이름, 제목, 내용, 비밀번호) 작성란, 업로드, 초기화
+> 업로드: 공지사항 세부사항 작성 후 버튼 클릭 시 게시글 등록
+> 초기화: 공지사항 세부사항에 작성된 내용 모두 초기화
+
+
+
+&nbsp;
+
+&nbsp;
+
+![image](https://github.com/oYJo7/fullstack-project/assets/66421365/7bab026d-08a3-4b44-8103-546954f64196)
+
+> 공지사항
+> 제목, 내용, 작성자, 조회수, 등록일
+> 등록: 공지사항 등록 페이지로 이동
+> 목록: 공지사항 목록 페이지로 이동
+> 수정: 현재 보고 있는 공지사항을 수정(비밀번호 요구)
+> 삭제: 현재 보고 있는 공지사항을 삭제(비밀번호 요구)
+
+
+
+&nbsp;
+
+🎮 webgame Page
+-------------
+![image](https://github.com/oYJo7/fullstack-project/assets/66421365/3acdc4ad-76c8-43a4-b4b2-c97a5c109a3f)
+
+> 12가지의 미니 게임 목록 및 설명 페이지
+> 미니 게임에 대한 난이도를 별로 수치화
+
+
+
+
+&nbsp;
 
