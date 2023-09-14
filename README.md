@@ -1,7 +1,6 @@
 
 ![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=FULLSTACK%20PROJECT&fontSize=70&animation=fadeIn&fontAlignY=38&desc=Determined%20to%20level%20up%20my%20full-stack%20skills!%20👍&descAlignY=51&descAlign=62)
 <div align="center">
-  <br />
     <h3>Tech Stack</h3>
     <div class="stack">
       <a href="#"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=black"/></a>
