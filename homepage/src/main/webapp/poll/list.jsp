@@ -125,14 +125,7 @@ function result(parent) {
 								<tr>
 									<td><%= dto.getNum() %></td>
 									<td>
-										<a href="javascript:read('<%= dto.getNum() %>')"><%= dto.getTitle() %></a>
 										<%
-				                        if (Utility.compareDay(dto.getWdate().substring(0, 10))) {
-				                        %> <img src="../images/new.gif"> 
-				                        <% } %>
-									</td>
-									<td>
-										<%  
 										// 현재 날짜 가져오기
 								        LocalDate currentDate = LocalDate.now();
 										String tempDate = dto.getEdate();
@@ -147,6 +140,25 @@ function result(parent) {
 								        // 현재 날짜와 비교할 날짜 비교
 								        int comparisonResult = currentDate.compareTo(targetDate);
 								        
+										%>
+										<%  
+								        if (comparisonResult <= 0) {
+							            %>
+											<a href="javascript:read('<%= dto.getNum() %>')"><%= dto.getTitle() %></a>
+										<% 
+								        }else{
+							        	%>
+							        		<a><%= dto.getTitle() %></a>
+							        	<% 
+								        }
+								        %>
+										<%
+				                        if (Utility.compareDay(dto.getWdate().substring(0, 10))) {
+				                        %> <img src="../images/new.gif"> 
+				                        <% } %>
+									</td>
+									<td>
+										<%  
 								        if (comparisonResult <= 0) {
 							            %>
 								            <span class="badge rounded-pill bg-success">진행</span>

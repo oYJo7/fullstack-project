@@ -283,6 +283,7 @@ function RS() {
     count = 0;
     let parentdiv = document.getElementById("vote");
     parentdiv.replaceChildren();
+    document.getElementById("type").value = null;
     toastr.success("초기화 되었습니다!", "초기화");
 }
 

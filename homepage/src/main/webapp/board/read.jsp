@@ -118,7 +118,7 @@ function newCmt(e){
 <%-- 	let str='<from action="commentProc.jsp" method="post"><input type="hidden" id="bbsno" name="bbsno" value="'+<%=bbsno%>+> --%>
 	let str='<form action="commentProc.jsp" method="post"><input type="hidden" id="bbsno" name="bbsno" value="<%=bbsno %>"><input type="hidden" name="nowPage" value="<%=nowPage %>"><input type="hidden" name="col" value="<%=col %>"><input type="hidden" name="word" value="<%=word %>"><input type="hidden" name="prent" value=';
 	str+=cmtno;
-	str+='-><div class="container"><div class="row"><div class="col p-0 pe-3"><input type="text" class="form-control shadow-sm mb-2" name="wname" id="wname" placeholder="이름" /> </div><div class="col p-0"><input type="password" class="form-control shadow-sm mb-2" name="passwd" id="pwd" placeholder="비밀번호" /> </div><textarea class="form-control shadow-sm mb-2" name="content" id="content" rows="3" placeholder="댓글을 작성하세요."></textarea></div><button class="btn btn-dark mb-3" type="submit">업로드</button></form>';
+	str+='><div class="container"><div class="row"><div class="col p-0 pe-3"><input type="text" class="form-control shadow-sm mb-2" name="wname" id="wname" placeholder="이름" /> </div><div class="col p-0"><input type="password" class="form-control shadow-sm mb-2" name="passwd" id="pwd" placeholder="비밀번호" /> </div><textarea class="form-control shadow-sm mb-2" name="content" id="content" rows="3" placeholder="댓글을 작성하세요."></textarea></div><button class="btn btn-dark mb-3" type="submit">업로드</button></form>';
 	console.log(str);
 	let cmtForm = document.getElementById(cmtno+"new_cmt");
 	console.log(cmtno+"new_cmt");
@@ -199,7 +199,6 @@ function newCmt(e){
 			  			if(cn_list.size()!=0){
 			  				for(int j = 0; j<cn_list.size(); j++){
 			  					BbsDTO child_dto = cn_list.get(j);
-			  					System.out.println("Child: "+child_dto.getPrent().split("-")[0]+"Cmt no: "+cmtdto.getCmtno());
 			  					if(Integer.parseInt(child_dto.getPrent().split("-")[0])==cmtdto.getCmtno()){
 
 			  		%>
